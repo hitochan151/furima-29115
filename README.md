@@ -11,7 +11,7 @@
 | frist_name         | string | null: false |
 | family_name_kana   | string | null: false |
 | frist_name_kana    | string | null: false |
-| brith_day          | string | null: false |
+| brith_day          | date   | null: false |
 | encrypted_password | string | null: false |
 
 ### Association
