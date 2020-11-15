@@ -21,18 +21,6 @@
 - has_one :destniation
 
 
-
-## catagory テーブル
-
-| Column   | Type   | Options                        |
-| -------  | -------| ---------------------------    |
-| name     | string | null: false, foreign_key: true |
-| ancestry | string | null: false, foreign_key: true |
-
-### Association
-
-- has_many : items
-
 ## items テーブル
 
 | Column           | Type   | Options     |
