@@ -20,16 +20,6 @@
 - has_one :card
 - has_one :destniation
 
-## image テーブル
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| image  | string | null: false |
-| item   | string | null: false |
-
-### Association
-
-- belongs_to :items
 
 
 ## catagory テーブル
