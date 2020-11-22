@@ -47,9 +47,12 @@
 | Column               | Type    | Options     |
 | ---------------      | ------  | ----------- |
 | user_id              | string  | null: false |
+| item_id              | string  | null: false |
 
 ### Association
 - belongs_to :user
+- belongs_to :items
+
 
 ## destniation テーブル
 
