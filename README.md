@@ -17,8 +17,7 @@
 ### Association
 
 - has_many :items
-- has_one :card
-- has_one :destniation
+- has_many :purchaser
 
 
 ## items テーブル
@@ -37,9 +36,7 @@
 
 ### Association
 
-- belongs_to : catagory
 - belongs_to :user
-- has_many : image
 
 
 ## purchaser テーブル
@@ -50,9 +47,10 @@
 | item_id              | string  | null: false |
 
 ### Association
+
 - belongs_to :user
 - belongs_to :items
-
+- has_one : destniation
 
 ## destniation テーブル
 
@@ -71,4 +69,4 @@
 
 ### Association
 
-- has_one :users
+- belongs_to : purchaser
