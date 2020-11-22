@@ -23,18 +23,17 @@
 
 ## items テーブル
 
-| Column           | Type   | Options     |
-| ---------------  | ------ | ----------- |
-| category_id      | string | null: false |
-| user_id          | string | null: false |
-| item_name        | string | null: false |
-| item_description | string | null: false |
-| category         | string | null: false |
-| product_ status  | string | null: false |
-| shipping_charges | string | null: false |
-| prefectures      | string | null: false |
-| days             | datetime | null: false |
-| selling_price    | string | null: false |
+| Column               | Type    | Options     |
+| ---------------      | ------  | ----------- |
+| user_id              | string  | null: false |
+| item_name            | string  | null: false |
+| selling_price        | string  | null: false |
+| comment              | string  | null: false |
+| category_id          | string  | null: false |
+|  item_description_id | integer | null: false |
+| shipping_charges_id  | integer | null: false |
+| prefectures_id       | integer | null: false |
+| days_id              | integer | null: false |
 
 ### Association
 
