@@ -41,6 +41,16 @@
 - belongs_to :user
 - has_many : image
 
+
+## purchaser テーブル
+
+| Column               | Type    | Options     |
+| ---------------      | ------  | ----------- |
+| user_id              | string  | null: false |
+
+### Association
+- belongs_to :user
+
 ## destniation テーブル
 
 | Column           | Type   | Options     |
@@ -55,18 +65,6 @@
 | adress           | string | null: false |
 | building_name    | string | null: false |
 | phone_numder     | string | null: false |
-
-### Association
-
-- has_one :users
-
-## card テーブル
-
-| Column           | Type   | Options     |
-| ---------------  | ------ | ----------- |
-| user_id          | integer | null: false |
-| customer_id      | integer | null: false |
-| card_id          | integer | null: false |
 
 ### Association
 
