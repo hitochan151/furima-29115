@@ -45,7 +45,6 @@
 
 | Column           | Type   | Options     |
 | ---------------  | ------ | ----------- |
-| user_id          | string | null: false |
 | family_name      | string | null: false |
 | frist_name       | string | null: false |
 | family_name_kana | string | null: false |
