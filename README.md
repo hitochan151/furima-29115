@@ -26,7 +26,6 @@
 | user                 | references | null: false , foreign_key: true |
 | name                 | string     | null: false |
 | selling_price        | integer    | null: false |
-| comment              | string     | null: false |
 | category_id          | string     | null: false |
 | item_description_id  | integer    | null: false |
 | shipping_charges_id  | integer    | null: false |
