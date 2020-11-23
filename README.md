@@ -55,10 +55,6 @@
 
 | Column           | Type   | Options     |
 | ---------------  | ------ | ----------- |
-| family_name      | string | null: false |
-| frist_name       | string | null: false |
-| family_name_kana | string | null: false |
-| frist_name_kana  | string | null: false |
 | post_code        | string | null: false |
 | prefecture       | string | null: false |
 | city             | string | null: false |
