@@ -21,17 +21,17 @@
 
 ## items テーブル
 
-| Column               | Type    | Options     |
-| ---------------      | ------  | ----------- |
-| user_id              | string  | null: false |
-| item_name            | string  | null: false |
-| selling_price        | string  | null: false |
-| comment              | string  | null: false |
-| category_id          | string  | null: false |
-|  item_description_id | integer | null: false |
-| shipping_charges_id  | integer | null: false |
-| prefectures_id       | integer | null: false |
-| days_id              | integer | null: false |
+| Column               | Type       | Options     |
+| ---------------      | ------     | ----------- |
+| user                 | references | null: false , foreign_key: true |
+| item_name            | string     | null: false |
+| selling_price        | string     | null: false |
+| comment              | string     | null: false |
+| category_id          | string     | null: false |
+| item_description_id  | integer    | null: false |
+| shipping_charges_id  | integer    | null: false |
+| prefectures_id       | integer    | null: false |
+| days_id              | integer    | null: false |
 
 ### Association
 
@@ -40,10 +40,10 @@
 
 ## purchaser テーブル
 
-| Column               | Type    | Options     |
-| ---------------      | ------  | ----------- |
-| user_id              | string  | null: false |
-| item_id              | string  | null: false |
+| Column  | Type        | Options                        |
+| ------- | --------    | ----------------------------   |
+| user    | references  | null: false, foreign_key: true |
+| item    | references  | null: false, foreign_key: true |
 
 ### Association
 
