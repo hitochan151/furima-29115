@@ -60,7 +60,7 @@
 | city             | string | null: false |
 | adress           | string | null: false |
 | building_name    | string |             |
-| phone_numder     | string | null: false |
+| phone_number     | string | null: false |
 
 ### Association
 
