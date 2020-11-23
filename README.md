@@ -30,7 +30,7 @@
 | category_id          | integer    | null: false |
 | product_status_id    | integer    | null: false |
 | shipping_charges_id  | integer    | null: false |
-| prefecture_id       | integer    | null: false |
+| prefecture_id        | integer    | null: false |
 | days_id              | integer    | null: false |
 
 ### Association
@@ -61,7 +61,7 @@
 | address          | string | null: false |
 | building_name    | string |             |
 | phone_number     | string | null: false |
-| purchaser        | string | foreign_key: true |
+| purchaser        | references | null: false, foreign_key: true |
 
 ### Association
 
