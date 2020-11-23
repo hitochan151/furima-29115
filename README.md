@@ -48,7 +48,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :items
+- belongs_to :item
 - has_one : destniation
 
 ## destniation テーブル
