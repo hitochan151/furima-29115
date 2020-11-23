@@ -59,7 +59,7 @@
 | prefecture_id    | integer| null: false |
 | city             | string | null: false |
 | adress           | string | null: false |
-| building_name    | string | null: false |
+| building_name    | string |             |
 | phone_numder     | string | null: false |
 
 ### Association
