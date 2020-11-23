@@ -28,6 +28,7 @@
 | selling_price        | integer    | null: false |
 | description          | text       | null: false |
 | category_id          | integer    | null: false |
+| product_status_id    | integer    | null: false |
 | shipping_charges_id  | integer    | null: false |
 | prefectures_id       | integer    | null: false |
 | days_id              | integer    | null: false |
