@@ -6,7 +6,6 @@
 | -----------------  | ------ | ----------- |
 | nickname           | string | null: false |
 | email              | string | null: false |
-| user_image         | string | null: false |
 | family_name        | string | null: false |
 | frist_name         | string | null: false |
 | family_name_kana   | string | null: false |
