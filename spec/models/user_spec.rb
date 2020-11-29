@@ -4,7 +4,7 @@ require 'rails_helper'
      it "nicknameが空だと登録できない" do
       user = User.new(nickname: "", email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000")
       user.valid?
-      binding.pry
+      expect(user.errors.full_messages).to include("Nickname can't be blank")
      end
      it "emailが空では登録できない" do
      end
