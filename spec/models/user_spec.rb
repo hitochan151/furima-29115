@@ -11,6 +11,7 @@ describe User do
       end
       it "passwordは半角英数字混合であれば登録できる" do
         @user.password = "aaaa1111"
+        @user.password_confirmation = "aaaa1111"
         expect(@user).to be_valid
       end
       it "passwordが6文字以上であれば登録できる" do
