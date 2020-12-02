@@ -58,8 +58,12 @@ describe User do
       it "passwordは半角英数字混合以外では登録できない" do
         @user.password = 'aaaaaa'
         @user.valid?
-        binding.pry
         expect(@user.errors.full_messages).to include("Password には英字と数字の両方を含めて設定してください")
+      end
+      it "メールアドレスは@を含まないと登録できない" do
+        @user.email = 'userexample.com'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Email is invalid")
       end
     end
   end
