@@ -29,7 +29,7 @@
 | description          | text       | null: false |
 | category_id          | integer    | null: false |
 | product_status_id    | integer    | null: false |
-| shipping_charges_id  | integer    | null: false |
+| shopping_charges_id  | integer    | null: false |
 | prefecture_id        | integer    | null: false |
 | days_id              | integer    | null: false |
 
@@ -67,8 +67,3 @@
 
 - belongs_to : purchaser
 
-
-
-１。 rails db:rollback             DBの差し戻し
-２。マイグレーションファイルの書き換え
-３。rails db:migrate
