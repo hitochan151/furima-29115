@@ -6,4 +6,5 @@ class Item < ApplicationRecord
   belongs_to :shopping_charges_id
   belongs_to :prefecture_id
   belongs_to :days_id
+
 end
