@@ -12,9 +12,9 @@ class Item < ApplicationRecord
   
   validates :selling_price, presence: true, format: {with: /\A[0-9]+\z/ } 
   validates :selling_price, numericality: { greater_than_or_equal_to: 300 } 
-  validates :selling_price, numericality: { less_than_or_equal_to: 9,999,999 } 
+  validates :selling_price, numericality: { less_than_or_equal_to: 9_999_999 } 
 
-  - belongs_to :user
-  - has_one :purchaser
+  belongs_to :user
+  has_one :purchaser
 
 end
