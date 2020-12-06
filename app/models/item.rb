@@ -14,5 +14,7 @@ class Item < ApplicationRecord
   validates :selling_price, numericality: { greater_than_or_equal_to: 300 } 
   validates :selling_price, numericality: { less_than_or_equal_to: 9,999,999 } 
 
+  - belongs_to :user
+  - has_one :purchaser
 
 end
