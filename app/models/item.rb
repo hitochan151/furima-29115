@@ -14,11 +14,9 @@ class Item < ApplicationRecord
   validates :selling_price, numericality: { greater_than_or_equal_to: 300 } 
   validates :selling_price, numericality: { less_than_or_equal_to: 9_999_999 } 
 
-  validates :category_id, :product_status_id, :days_id,
+  validates :category_id, :product_status_id, :days_id, :prefecture_id,
   numericality: { other_than: 1 } 
   
-
-  validates :prefecture_id, numericality: { other_than: 0 } 
   
 
   belongs_to :user
