@@ -63,7 +63,7 @@ describe Item do
         expect(@item.errors.full_messages).to include("Prefecture must be other than 1")
       end
 
-      it "販売価格は半角数字のみ保存可能であること" do
+      it "販売価格は半角数字以外は保存できないこと" do
         @item.selling_price = "２００"
         @item.valid?
         expect(@item.errors.full_messages).to include("Selling price is not a number", "Selling price is not a number")
