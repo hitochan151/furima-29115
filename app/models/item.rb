@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to :day
 
   validates :name, :description, :category_id, :product_status_id, 
-  :prefecture_id, :days_id, :shopping_charges_id, presence: true
+  :prefecture_id, :days_id, :shopping_charges_id, :image, presence: true
   
   validates :selling_price, presence: true, format: {with: /\A[0-9]+\z/ } 
   validates :selling_price, numericality: { greater_than_or_equal_to: 300 } 
