@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 2020_12_03_085724) do
     t.text "description", null: false
     t.integer "category_id", null: false
     t.integer "product_status_id", null: false
-    t.integer "shopping_charges_id", null: false
+    t.integer "shopping_charge_id", null: false
     t.integer "prefecture_id", null: false
-    t.integer "days_id", null: false
+    t.integer "day_id", null: false
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 

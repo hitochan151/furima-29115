@@ -5,9 +5,9 @@ FactoryBot.define do
     category_id          { 2 }
     product_status_id    { 2 }
     prefecture_id        { 2 }
-    days_id              { 2 }
+    day_id              { 2 }
     selling_price        { 310 }
-    shopping_charges_id   { 2 }
+    shopping_charge_id   { 2 }
 
 
       association :user
