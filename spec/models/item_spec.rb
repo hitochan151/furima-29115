@@ -40,7 +40,7 @@ describe Item do
       end
       
       it "配送料の負担が空では登録できないこと" do
-        @item.shopping_charges_id = 1
+        @item.shopping_charge_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shopping charges must be other than 1")
       end
@@ -52,7 +52,7 @@ describe Item do
       end
       
       it "発送までの日数が空では登録できないこと" do
-        @item.days_id = 1
+        @item.day_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Days must be other than 1")
       end

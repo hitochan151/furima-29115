@@ -9,9 +9,9 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.text :description,               null: false
       t.integer :category_id,            null: false
       t.integer :product_status_id,      null: false
-      t.integer :shopping_charges_id,    null: false
+      t.integer :shopping_charge_id,    null: false
       t.integer :prefecture_id,          null: false
-      t.integer :days_id,                null: false
+      t.integer :day_id,                null: false
     end
   end
 end
