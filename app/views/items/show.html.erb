@@ -16,8 +16,9 @@
     </div>
     <div class="item-price-box">
       <span class="item-price">
-        ¥ 999,999,999
-      </span>
+
+      ¥<%= @item.selling_price %></span>
+
       <span class="item-postage">
         <%= @item.shopping_charge.name %>
       </span>
