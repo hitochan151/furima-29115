@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path
     else
-      render edit_item_path
+      render :edit
     end
   end
 
