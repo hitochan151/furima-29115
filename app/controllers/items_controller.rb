@@ -1,5 +1,10 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :set_item, only: [:edit, :show, :update]
+
+  def index
+    @tweets = Tweet.all
+  end
   
 
   def index
@@ -20,21 +25,22 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
     @item.update(item_params)
     if @item.save
       redirect_to item_path
     else
       render :edit
     end
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
   private
