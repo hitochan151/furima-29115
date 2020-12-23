@@ -1,0 +1,2 @@
+class Destniation < ApplicationRecord
+end
