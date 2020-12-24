@@ -1,0 +1,2 @@
+class PurchaserDestniationController < ApplicationController
+end
