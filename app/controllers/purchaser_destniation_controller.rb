@@ -1,11 +1,12 @@
 class PurchaserDestniationController < ApplicationController
 
   def index
-    @purchaser_destniation = Purchaserdestniation.new
+    @purchaser_destniation = PurchaserDestniation.new
   end
 
   def create
-    @purchaser_destniation = Purchaserdestniation.new(purchaser_params)
+    binding.pry
+    @purchaser_destniation = PurchaserDestniation.new(purchaser_params)
     if @purchaser_destniation.valid?
       @purchaser_destniation.save
       return redirect_to root_path
@@ -17,6 +18,8 @@ class PurchaserDestniationController < ApplicationController
   private
 
   def purchaser_params
-    params.require(:order).permit(:price)
+    params.require(:purchaser_destniation)
+    .permit(:post_code, :prefecture_id, :city, :address, :building_name, :phone_number)
+    .merge(:item_id, :user_id, purchaser.id)
   end
 end
