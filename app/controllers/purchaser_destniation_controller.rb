@@ -5,7 +5,7 @@ class PurchaserDestniationController < ApplicationController
   end
 
   def create
-    binding.pry
+   
     @purchaser_destniation = PurchaserDestniation.new(purchaser_params)
     if @purchaser_destniation.valid?
       @purchaser_destniation.save
@@ -18,8 +18,6 @@ class PurchaserDestniationController < ApplicationController
   private
 
   def purchaser_params
-    params.require(:purchaser_destniation)
-    .permit(:post_code, :prefecture_id, :city, :address, :building_name, :phone_number)
-    .merge(:item_id, :user_id, purchaser.id)
+    params.require(:purchaser_destniation).permit(:post_code, :prefecture_id, :city, :address, :building_name, :phone_number, :purchaser_id, :item_id, :user_id)
   end
 end
