@@ -1,4 +1,5 @@
 class PurchaserDestniationController < ApplicationController
+  before_action :set_item, only: [:index, :create]
 
   def index
     @purchaser_destniation = PurchaserDestniation.new
@@ -12,6 +13,10 @@ class PurchaserDestniationController < ApplicationController
     else
       render action: :index
     end
+  end
+
+  def set_item
+    @item = Item.find(params[:item_id])
   end
 
   private
