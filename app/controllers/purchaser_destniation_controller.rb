@@ -1,7 +1,7 @@
 class PurchaserDestniationController < ApplicationController
 
   def index
-    @purchaser_destniation = PurchaserDestniation.new(params[:item_id])
+    @purchaser_destniation = PurchaserDestniation.new
   end
 
   def create
@@ -18,6 +18,6 @@ class PurchaserDestniationController < ApplicationController
 
   def purchaser_destniation_params
     params.require(:purchaser_destniation).permit(:post_code, :prefecture_id, :city, :address, :building_name, :phone_number, :purchaser_id)
-    .merge(item_id: params[:item_id])
+    .merge(item_id: params[:item_id], user_id: current_user.id)
   end
 end
