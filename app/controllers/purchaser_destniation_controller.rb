@@ -6,7 +6,7 @@ class PurchaserDestniationController < ApplicationController
   end
 
   def create
-    binding.pry
+   binding.pry
    @purchaser_destniation = PurchaserDestniation.new(purchaser_destniation_params)
     if @purchaser_destniation.valid?
       @purchaser_destniation.save
