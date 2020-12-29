@@ -22,7 +22,7 @@ RSpec.describe PurchaserDestniation, type: :model do
     end
     it 'phone_numberを選択していないと保存できないこと' do
     end
-    it 'phone_numberが半角のハイフンを含まない正しい形式でないと保存できないこと' do
+    it 'phone_numberがハイフンを含まない正しい形式でないと保存できないこと' do
     end
   end
 end
