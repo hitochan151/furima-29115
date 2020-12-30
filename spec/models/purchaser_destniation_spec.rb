@@ -7,7 +7,7 @@ RSpec.describe PurchaserDestniation, type: :model do
     end
 
     it 'すべての値が正しく入力されていれば保存できること' do
-      pp @purchaser_destniation.errors.full_messages
+       @purchaser_destniation.errors.full_messages
       expect(@purchaser_destniation).to be_valid
     end
     it 'post_codeが空だと保存できないこと' do
@@ -58,7 +58,14 @@ RSpec.describe PurchaserDestniation, type: :model do
       @purchaser_destniation.post_code = '１２３ー４５６７'
       @purchaser_destniation.valid?
       expect(@purchaser_destniation.errors.full_messages).to include("Post code is invalid")
-
+    end
+    it "priceとtokenがあれば保存ができること" do
+      expect(@purchaser_destniation).to be_valid
+    end
+    it "tokenが空では登録できないこと" do
+      @purchaser_destniation.token = nil
+      @purchaser_destniation.valid?
+      expect(@purchaser_destniation.errors.full_messages).to include("Token can't be blank")
     end
   end
 end
