@@ -1,6 +1,6 @@
 class PurchaserDestniation
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :address, :building_name, :phone_number, :purchaser 
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :address, :building_name, :phone_number, :purchaser, :token
 
   with_options presence: true do
     validates :city, :address, format: { with: /\A[ぁ-んァ-ン一-龥]/}
