@@ -1,9 +1,10 @@
 class PurchaserDestniationController < ApplicationController
+  before_action :authenticate_user!, only: [:index]
   before_action :set_item, only: [:index, :create]
 
   def index
     @purchaser_destniation = PurchaserDestniation.new
-    if current_user == @purchaser_destniation.user
+    if @purchaser_destniation.user
       redirect_to root_path
     else
       render :item_purchaser_destniation_index_path
