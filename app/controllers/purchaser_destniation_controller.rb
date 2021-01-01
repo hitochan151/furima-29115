@@ -3,6 +3,11 @@ class PurchaserDestniationController < ApplicationController
 
   def index
     @purchaser_destniation = PurchaserDestniation.new
+    if current_user == @purchaser_destniation.user
+      redirect_to root_path
+    else
+      render :item_purchaser_destniation_index_path
+    end
   end
 
   def create
@@ -35,5 +40,4 @@ class PurchaserDestniationController < ApplicationController
         currency: 'jpy'
     )
   end
-
 end
