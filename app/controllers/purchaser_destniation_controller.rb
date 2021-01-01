@@ -4,7 +4,8 @@ class PurchaserDestniationController < ApplicationController
 
   def index
     @purchaser_destniation = PurchaserDestniation.new
-    if @purchaser_destniation.user
+    if  user_signed_in? 
+      current_user.id == @purchaser_destniation.user_id
       redirect_to root_path
     else
       render :item_purchaser_destniation_index_path
