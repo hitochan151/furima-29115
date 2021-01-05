@@ -23,7 +23,7 @@ RSpec.describe PurchaserDestniation, type: :model do
     it 'prefecture_idを選択していないと保存できないこと' do
       @purchaser_destniation.prefecture_id = 1
       @purchaser_destniation.valid?
-      expect(@purchaser_destniation.errors.full_messages).to include("Prefecture can't be blank", "Prefecture is not a number")
+      expect(@purchaser_destniation.errors.full_messages).to include("Prefecture must be other than 1")
     end
     it 'cityを選択していないと保存できないこと' do
       @purchaser_destniation.city = nil
