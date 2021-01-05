@@ -7,6 +7,9 @@ class PurchaserDestniationController < ApplicationController
     if current_user.id == @item.user_id
       redirect_to  root_path
     end
+    if @purchaser_destniation.present?
+      redirect_to  root_path
+    end
   end
 
   def create
