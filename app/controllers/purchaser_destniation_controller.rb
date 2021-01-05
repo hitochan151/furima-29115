@@ -4,10 +4,8 @@ class PurchaserDestniationController < ApplicationController
 
   def index
     @purchaser_destniation = PurchaserDestniation.new
-    if current_user.id == @purchaser_destniation.user_id
-      redirect_to root_path
-    else
-      render user_session
+    if current_user.id == @item.user_id
+      redirect_to  root_path
     end
   end
 
