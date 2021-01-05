@@ -12,7 +12,7 @@ class PurchaserDestniationController < ApplicationController
   def create
    @purchaser_destniation = PurchaserDestniation.new(purchaser_destniation_params)
     if @purchaser_destniation.valid?
-      @pay_item
+      pay_item
       @purchaser_destniation.save
       return redirect_to root_path
     else
