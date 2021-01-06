@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe PurchaserDestniation, type: :model do
   describe '配送先情報の保存' do
     before do
-      @purchaser_destniation = FactoryBot.build(:purchaser_destniation)
-      @user = FactoryBot.build(:user)
-      @item = FactoryBot.build(:item)
+      user = FactoryBot.create(:user)
+      item = FactoryBot.create(:item)
+      @purchaser_destniation = FactoryBot.build(:purchaser_destniation, user_id: user.id, item_id: item.id)
     end
 
     context '商品購入ができる時' do
