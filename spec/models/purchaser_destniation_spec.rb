@@ -4,6 +4,8 @@ RSpec.describe PurchaserDestniation, type: :model do
   describe '配送先情報の保存' do
     before do
       @purchaser_destniation = FactoryBot.build(:purchaser_destniation)
+      @user = FactoryBot.build(:user)
+      @item = FactoryBot.build(:item)
     end
 
     it 'すべての値が正しく入力されていれば保存できること' do
@@ -38,15 +40,10 @@ RSpec.describe PurchaserDestniation, type: :model do
     it 'addressを選択していないと保存できないこと' do
       @purchaser_destniation.address = nil
       @purchaser_destniation.valid?
-      expect(@purchaser_destniation.errors.full_messages).to include("Address can't be blank", "Address is invalid")
-    end
-    it 'addressが半角数字だと保存できないこと' do
-      @purchaser_destniation.address = '1234'
-      @purchaser_destniation.valid?
-      expect(@purchaser_destniation.errors.full_messages).to include("Address is invalid")
+      expect(@purchaser_destniation.errors.full_messages).to include("Address can't be blank")
     end
     it 'building_nameは空でも保存できること' do
-      @purchaser_destniation.building_name = nil
+      @purchaser_destniation.building_name = ' '
       expect(@purchaser_destniation).to be_valid
     end
     it 'phone_numberを選択していないと保存できないこと' do
@@ -54,8 +51,8 @@ RSpec.describe PurchaserDestniation, type: :model do
       @purchaser_destniation.valid?
       expect(@purchaser_destniation.errors.full_messages).to include("Phone number can't be blank")
     end
-    it 'phone_numberがハイフンを含まない半角でないと保存できないこと' do
-      @purchaser_destniation.post_code = '１２３ー４５６７'
+    it 'phone_numberがハイフンを含まない半角の11文字以内でないと保存できないこと' do
+      @purchaser_destniation.post_code = '１２３ー４５６７ー１２３４５'
       @purchaser_destniation.valid?
       expect(@purchaser_destniation.errors.full_messages).to include("Post code is invalid")
     end
@@ -66,6 +63,16 @@ RSpec.describe PurchaserDestniation, type: :model do
       @purchaser_destniation.token = nil
       @purchaser_destniation.valid?
       expect(@purchaser_destniation.errors.full_messages).to include("Token can't be blank")
+    end
+    it "user_idが空では登録できないこと" do
+      @purchaser_destniation.user_id = nil
+      @purchaser_destniation.valid?
+      expect(@purchaser_destniation.errors.full_messages).to include("User can't be blank")
+    end
+    it "item_idが空では登録できないこと" do
+      @purchaser_destniation.item_id = nil
+      @purchaser_destniation.valid?
+      expect(@purchaser_destniation.errors.full_messages).to include("Item can't be blank")
     end
   end
 end
