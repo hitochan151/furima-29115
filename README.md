@@ -19,6 +19,7 @@
 - has_many :purchasers
 
 
+
 ## items テーブル
 
 | Column               | Type       | Options     |
