@@ -87,12 +87,12 @@
   </div>
   <%# /商品の概要 %>
 
-  <div class="comment-box">
+  <div class="comment-box" id="comment-box">
   <% @item.messages.reverse_each do |message| %>
     <p><%= message.text %></p>
   <% end %>
     <%= form_with model: [@item, @message] do |f| %>
-      <%= f.text_area :text %>
+      <%= f.text_area :text, id:"messages" %>
       <br>
       <button type="submit" class="comment-btn">
         <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
